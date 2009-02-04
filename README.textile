@@ -35,11 +35,15 @@ h2. Installation
 
 3. Then add the example code from above to your ~adhearsion-project/dialplan.rb.
 
-4. From within the directory ~adhearsion-project/components/restful_clicktocall/web run:
+4. Enable the restful_rpc component from within your ~adhearsion-project/ directory:
+
+<pre>ahn enable component restful_rpc</pre>
+	
+5. From within the directory ~adhearsion-project/components/restful_clicktocall/web run:
 
 <pre>ruby run_me.rb</pre>
 
-5. Connect to the web form:
+6. Connect to the web form:
 
 <pre>http://localhost:4567</pre>
 
