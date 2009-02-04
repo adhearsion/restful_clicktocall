@@ -1,0 +1,30 @@
+h1. Click to Call
+
+h2. Description
+
+Example component for Adhearsion showing a click to call application. Also shows how to use the RESTful API of
+Adhearsion.
+
+h2. Example
+
+Place this in your dialplan.rb of your Adhearsion project:
+
+    <pre>
+	<code>
+	adhearsion {
+	  self.call.variables[:destination] = get_variable("destination")
+	  dial self.call.variables[:destination]
+    }
+	</code>
+	</pre>
+		
+h2. Dependencies
+
+* restful_adhearsion v0.1.0+
+* sinatra v0.3.3+
+
+h2. Installation
+
+In your components directory of your Adhearsion project:
+
+	

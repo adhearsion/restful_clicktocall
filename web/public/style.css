@@ -1,0 +1,53 @@
+body {
+	font-family: sans-serif;
+	background-color: #7ad2ff;
+}
+
+#content {
+  background-color: white;
+  width: 360px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 20px solid #5da0c3;
+}
+
+#content h1 {
+  margin: 0;
+  background-color: #5da0c3;
+  font-size: 38px;
+  letter-spacing: -1px;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+#content h2 {
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+#content input, #content label {
+  font-size: 18px;
+}
+
+#content input {
+  width: 150px;
+}
+
+#call-form p {
+  text-align: center;
+}
+
+#call {
+	background-color: #cfcfcf;
+  border: 20px solid black;
+	text-align: center;
+	padding: 6px 3px;
+	width: 374px;
+	font-size: 30px;
+  margin: 10px auto 0 auto;
+}
+
+.hidden {
+  display: none;
+}
