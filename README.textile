@@ -25,6 +25,22 @@ h2. Dependencies
 
 h2. Installation
 
-In your components directory of your Adhearsion project:
+1. Install the <a href="http://github.com/jsgoecke/restful_adhearsion">RESTful-Adhearsion</a> client library gem:
 
-	
+<pre>sudo gem install jsgoecke-restful_adhearsion --source=http://gems.github.com/</pre>
+
+2. In your components directory of your Adhearsion project:
+
+<pre>git clone git://github.com/jsgoecke/restful-clicktocall.git</pre>
+
+3. Then add the example code from above to your ~adhearsion-project/dialplan.rb.
+
+4. From within the directory ~adhearsion-project/components/restful_clicktocall/web run:
+
+<pre>ruby run_me.rb</pre>
+
+5. Connect to the web form:
+
+<pre>http://localhost:4567</pre>
+
+Then you are off and running!
