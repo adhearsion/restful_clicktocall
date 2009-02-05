@@ -58,7 +58,7 @@ get '/' do
     <h2>Bridge two people together</h2>
   
     <div id="call-form">
-      <p><label for="source">Primay party: </label><input type="text" id="source" name="source"/></p>
+      <p><label for="source">Primary party: </label><input type="text" id="source" name="source"/></p>
       <p><label for="destination">Second party: </label><input type="text" name="destination" id="destination"/></p>
       <p><button onclick="new AhnCall($('#call'), $('#source').val(), $('#destination').val())">Start call</button></p>
     </div>
