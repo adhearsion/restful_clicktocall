@@ -31,7 +31,7 @@ h2. Installation
 
 2. In your components directory of your Adhearsion project:
 
-<pre>git clone git://github.com/jsgoecke/restful-clicktocall.git</pre>
+<pre>git clone git://github.com/jsgoecke/restful_clicktocall.git</pre>
 
 3. Then add the example code from above to your ~adhearsion-project/dialplan.rb.
 
