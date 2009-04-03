@@ -48,3 +48,20 @@ h2. Installation
 <pre>http://localhost:4567</pre>
 
 Then you are off and running!
+
+7. If you would like to run Sinatra as a daemon, I recommend you use Rack and Passenger
+
+Simply do the following:
+
+* Install the Apache Webserver
+* gem install rack
+* gem install passenger (follow instructions <a href='http://www.modrails.com/install.html'>here</a>)
+
+Copy the files and directories in ~ahn-project/components/restful_clicktocall/web to the appropriate location on your Apache web server. Add this virtual host settings to your Apache configuration:
+
+<pre><VirtualHost *:80>
+  ServerName your.website.com
+  DocumentRoot /var/www/restful_clicktocall_web/public
+</VirtualHost></pre>
+
+Restart your Apache web server and then connect to the site you configured. For more options I recommend referring to the Passenger documentation found <a href='http://www.modrails.com/documentation/Users%20guide.html'>here</a>.
