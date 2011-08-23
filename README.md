@@ -17,27 +17,27 @@ Place this in your dialplan.rb of your Adhearsion project:
 
 ## Installation
 
-1. Install the [http://github.com/jsgoecke/restful_adhearsion](RESTful-Adhearsion) client library gem:
+1. Install the [RESTful-Adhearsion](http://github.com/jsgoecke/restful_adhearsion) client library gem:
 
-    sudo gem install jsgoecke-restful_adhearsion --source=http://gems.github.com/
+    `sudo gem install jsgoecke-restful_adhearsion --source=http://gems.github.com/`
 
 2. In your components directory of your Adhearsion project:
 
-    git clone git://github.com/jsgoecke/restful_clicktocall.git
+    `git clone git://github.com/jsgoecke/restful_clicktocall.git`
 
-3. Then add the example code from above to your ~adhearsion-project/dialplan.rb.
+3. Then add the example code from above to your `adhearsion-project/dialplan.rb`.
 
-4. Enable the restful_rpc component from within your ~adhearsion-project/ directory:
+4. Enable the restful_rpc component from within your `adhearsion-project/` directory:
 
-    ahn enable component restful_rpc
+    `ahn enable component restful_rpc`
 
-5. From within the directory ~adhearsion-project/components/restful_clicktocall/web run:
+5. From within the directory `adhearsion-project/components/restful_clicktocall/web` run:
 
-    ruby run_me.rb
+    `ruby run_me.rb`
 
 6. Connect to the web form:
 
-    http://localhost:4567
+    `http://localhost:4567`
 
 Then you are off and running!
 
@@ -47,15 +47,15 @@ Simply do the following:
 
 * Install the Apache Webserver
 * gem install rack
-* gem install passenger (follow instructions [http://www.modrails.com/install.html](here)
+* gem install passenger (follow instructions [here](http://www.modrails.com/install.html))
 
 Copy the files and directories in ~ahn-project/components/restful_clicktocall/web to the appropriate location on your Apache web server. Add this virtual host settings to your Apache configuration:
 
 ```
   <VirtualHost *:80>
     ServerName your.website.com
-    DocumentRoot /var/www/restful\_clicktocall\_web/public
+    DocumentRoot /var/www/restful_clicktocall_web/public
   </VirtualHost>
 ```
 
-Restart your Apache web server and then connect to the site you configured. For more options I recommend referring to the Passenger documentation found [http://www.modrails.com/documentation/Users%20guide.html](here).
+Restart your Apache web server and then connect to the site you configured. For more options I recommend referring to the [Passenger documentation](http://www.modrails.com/documentation/Users%20guide.html).
