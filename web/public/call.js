@@ -4,14 +4,14 @@
 function AhnCall(viewer_element, source, destination) {
   this.viewer      = viewer_element;
   this.text_holder = $(viewer_element.children()[0]);
-  
+
   this.source      = source;
   this.destination = destination;
-  
+
   this.viewer.slideDown();
-  
+
   var self = this;
-  
+
   // Using the more sophisticated jQuery.ajax method instead of jQuery.post in order to handle errors.
   jQuery.ajax({
     url:  "call",
@@ -20,51 +20,51 @@ function AhnCall(viewer_element, source, destination) {
     error:   function(event) { self.transition_to("error")   },
     data:    { "destination": self.destination, "source": self.source }
   });
-  
+
   // Possible states: new, connecting, error, ringing, established, hanging_up, finished
   self.state = "new";
-  
+
   self.transition_to = function(new_state) {
     self.state = new_state;
     self.state_transitions[new_state]();
   };
-  
+
   self.state_transitions = {
-    
+
     connecting: function() {
       self.update_text("Connecting");
       self.viewer.removeClass("hidden");
       self.viewer.children("button").remove();
       self.viewer.slideDown("slow");
     },
-    
+
     ringing: function() {
       self.update_text("Ringing");
       self.queue_next_heartbeat(false);
     },
-    
+
     established: function() {
       self.update_text("Call in progress!");
       self.viewer.append(self.get_hangup_button());
     },
-    
+
     hanging_up: function() {
       self.update_text("Hanging up");
     },
-    
+
     finished: function() {
       self.update_text("Call finished");
       self.viewer.children("button").remove();
       self.viewer.append(self.viewer_hide_button());
     },
-    
+
     error: function() {
       self.update_text("Whoops. Error occurred!");
       self.viewer.children("button").remove();
       self.viewer.append(self.viewer_hide_button());
     }
   };
-  
+
   self.viewer_hide_button = function() {
     hide_link = $(document.createElement("button"));
     hide_link.text("Hide");
@@ -82,11 +82,11 @@ function AhnCall(viewer_element, source, destination) {
     }
     return self.hangup_button;
   };
-  
+
   self.update_text = function(new_text) {
     self.text_holder.text(new_text);
   };
-  
+
   self.heartbeat = function(has_been_answered) {
     jQuery.getJSON("status", {destination: self.destination}, function(data) {
       call_status = data.result;
@@ -107,9 +107,9 @@ function AhnCall(viewer_element, source, destination) {
       }
     });
   };
-  
+
   self.heartbeat_timeout = 1000;
-  
+
   self.queue_next_heartbeat = function(has_been_answered) {
     //var has_been_answered = has_been_answered;
     setTimeout(function() { self.heartbeat(has_been_answered) }, self.heartbeat_timeout);
@@ -125,7 +125,7 @@ function AhnCall(viewer_element, source, destination) {
       data: { "call_to_hangup": self.destination }
     });
   };
-  
+
   self.transition_to("connecting");
-  
+
 }
