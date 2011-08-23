@@ -49,7 +49,7 @@ Simply do the following:
 * gem install rack
 * gem install passenger (follow instructions [here](http://www.modrails.com/install.html))
 
-Copy the files and directories in ~ahn-project/components/restful_clicktocall/web to the appropriate location on your Apache web server. Add this virtual host settings to your Apache configuration:
+Copy the files and directories in `ahn-project/components/restful_clicktocall/web` to the appropriate location on your Apache web server. Add this virtual host settings to your Apache configuration:
 
 ```
   <VirtualHost *:80>
