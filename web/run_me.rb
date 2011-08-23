@@ -36,7 +36,7 @@ end
 
 get '/status' do
   # The line below will return either {result:"alive"} or {result:"dead"} to the browser
-  {:result => Adhearsion.call_with_destination(params[:destination])}.to_json
+  Adhearsion.call_with_destination(params[:destination]).to_json
 end
 
 get '/' do
