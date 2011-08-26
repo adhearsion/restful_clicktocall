@@ -1,4 +1,4 @@
 source :rubygems
 
 gem 'sinatra'
-gem 'restful_adhearsion'
+gem 'restful_adhearsion', '>= 0.2.0'
