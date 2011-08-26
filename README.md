@@ -30,7 +30,7 @@ Place this in your dialplan.rb of your Adhearsion project:
 
     `config.add_component 'ahn-restful-rpc'`
 
-4. Copy the example component config from [here](https://github.com/adhearsion/ahn-restful-rpc/blob/develop/config/ahn-restful-rpc.yml) to `adhearsion-project/config/components/restful_rpc.yml`
+4. Copy the example component config from [here](https://github.com/adhearsion/ahn-restful-rpc/blob/develop/config/ahn-restful-rpc.yml) to `adhearsion-project/config/components/ahn-restful-rpc.yml`
 
 4. From within the directory `adhearsion-project/components/restful_clicktocall/web` run:
 
