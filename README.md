@@ -17,31 +17,25 @@ Place this in your dialplan.rb of your Adhearsion project:
 
 ## Installation
 
-1. Install the [RESTful-Adhearsion](http://github.com/jsgoecke/restful_adhearsion) client library gem:
+1. In your components directory of your Adhearsion project:
 
-    `sudo gem install jsgoecke-restful_adhearsion --source=http://gems.github.com/`
+    `git clone git://github.com/adhearsion/restful_clicktocall.git`
 
-2. In your components directory of your Adhearsion project:
+2. Add the example code from above to your `adhearsion-project/dialplan.rb`.
 
-    `git clone git://github.com/jsgoecke/restful_clicktocall.git`
+3. Add the restful_rpc component to your Gemfile and `startup.rb` gem component configuration.
 
-3. Then add the example code from above to your `adhearsion-project/dialplan.rb`.
+4. From within the directory `adhearsion-project/components/restful_clicktocall/web` run:
 
-4. Enable the restful_rpc component from within your `adhearsion-project/` directory:
+    `bundle install && bundle exec rackup`
 
-    `ahn enable component restful_rpc`
+5. Connect to the web form:
 
-5. From within the directory `adhearsion-project/components/restful_clicktocall/web` run:
-
-    `ruby run_me.rb`
-
-6. Connect to the web form:
-
-    `http://localhost:4567`
+    `http://localhost:9292`
 
 Then you are off and running!
 
-7. If you would like to run Sinatra as a daemon, I recommend you use Rack and Passenger
+6. If you would like to run Sinatra as a daemon, I recommend you use Rack and Passenger
 
 Simply do the following:
 

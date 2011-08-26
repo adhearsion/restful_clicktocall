@@ -1,8 +1,3 @@
-require 'rubygems'
-require 'sinatra'  # Get with "gem install sinatra"
-require 'restful_adhearsion'
-require 'pp'
-
 # Create our Adhearsion object connected to the RESTful API of Adhearsion
 Adhearsion = RESTfulAdhearsion.new :host => "localhost",
                                    :port => 5000,
