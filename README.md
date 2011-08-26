@@ -23,7 +23,14 @@ Place this in your dialplan.rb of your Adhearsion project:
 
 2. Add the example code from above to your `adhearsion-project/dialplan.rb`.
 
-3. Add the restful_rpc component to your Gemfile and `startup.rb` gem component configuration.
+3. Add the restful_rpc component to your Gemfile and `startup.rb` gem component configuration:
+    `gem 'ahn-restful-rpc'`
+
+    and
+
+    `config.add_component 'ahn-restful-rpc'`
+
+4. Copy the example component config from [here](https://github.com/adhearsion/ahn-restful-rpc/blob/develop/config/ahn-restful-rpc.yml) to `adhearsion-project/config/components/restful_rpc.yml`
 
 4. From within the directory `adhearsion-project/components/restful_clicktocall/web` run:
 
